@@ -4,7 +4,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/amr-ramadan-portfolio/', // repo name
+  base: '/amr-ramadan-portfolio/', // THIS IS CRUCIAL
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
