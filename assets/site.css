@@ -424,6 +424,17 @@ html:not(.js) .marquee__track, .reduced .marquee__track { animation: marquee 40s
 .job__inner ul { margin: 0; padding: 0 0 30px 200px; list-style: none; display: grid; gap: 10px; max-width: 980px; }
 .job__inner li { position: relative; padding-left: 22px; color: #c4c4cc; }
 .job__inner li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 1px; background: var(--accent); }
+.job__lead { margin: 0 0 22px 200px; max-width: 760px; color: var(--text); font-size: 1.05rem; }
+.job__inner ul.job__areas { grid-template-columns: 1fr 1fr; gap: 14px; max-width: none; padding-bottom: 22px; }
+.job__areas li { padding: 18px 20px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); font-size: 14.5px; line-height: 1.55; transition: border-color .4s, transform .5s var(--ease); }
+.job__areas li:hover { border-color: rgba(124,196,255,.35); transform: translateY(-2px); }
+.job__areas li::before { display: none; }
+.job__areas li:last-child { grid-column: 1 / -1; }
+.job__areas b { display: block; margin-bottom: 6px; font-family: var(--mono); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+.job__areas code { font-family: var(--mono); font-size: .9em; color: var(--text); background: rgba(255,255,255,.06); padding: 1px 6px; border-radius: 6px; }
+.job__inner ul.job__chips { display: flex; gap: 6px; padding: 0 0 32px 200px; }
+.job__inner ul.job__chips li { padding: 5px 11px; color: #c9c9d1; }
+.job__inner ul.job__chips li::before { display: none; }
 
 /* ───────── Toolkit ───────── */
 .bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -488,6 +499,9 @@ html:not(.js) .marquee__track, .reduced .marquee__track { animation: marquee 40s
   .job__loc { grid-column: 1; grid-row: 3; text-align: left; }
   .job__toggle { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
   .job__inner ul { padding-left: 0; }
+  .job__lead { margin-left: 0; }
+  .job__inner ul.job__areas { grid-template-columns: 1fr; }
+  .job__inner ul.job__chips { padding-left: 0; }
   .socials { grid-template-columns: 1fr 1fr; }
   .socials li:nth-child(3) { border-left: 0; }
   .socials li:nth-child(n+3) { border-top: 1px solid var(--line); }
