@@ -21,21 +21,15 @@
   const year = $('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
 
-  // NeQabty case study: the pillar in the middle of the viewport drives the phone screen
-  const pillars = $$('[data-pillar]');
-  const caseScreens = $$('[data-case-screens] .cs');
-  const caseDots = $$('.case__dots i');
-  const setPillar = (n) => {
-    pillars.forEach((p) => p.classList.toggle('is-active', +p.dataset.pillar === n));
-    caseScreens.forEach((sc) => sc.classList.toggle('is-active', +sc.dataset.screen === n));
-    caseDots.forEach((d, k) => d.classList.toggle('on', k === n));
-  };
-  if (pillars.length && 'IntersectionObserver' in window) {
-    const po = new IntersectionObserver((entries) => {
-      entries.forEach((en) => { if (en.isIntersecting) setPillar(+en.target.dataset.pillar); });
-    }, { rootMargin: '-45% 0px -45% 0px' });
-    pillars.forEach((p) => po.observe(p));
-    setPillar(0);
+  // Phone screen carousel
+  const screens = $$('[data-screens] .app-screen');
+  if (screens.length && !reduced) {
+    let i = 0;
+    setInterval(() => {
+      screens[i].classList.remove('is-active');
+      i = (i + 1) % screens.length;
+      screens[i].classList.add('is-active');
+    }, 3200);
   }
 
   // Experience accordion
@@ -121,6 +115,18 @@
     ['about', 'work', 'experience', 'toolkit', 'contact'].forEach((id) => { const el = document.getElementById(id); if (el) io.observe(el); });
   }
 
+  // Toolkit spotlight
+  const bento = $('[data-bento]');
+  if (bento && finePointer) {
+    bento.addEventListener('pointermove', (e) => {
+      $$('.tile', bento).forEach((t) => {
+        const r = t.getBoundingClientRect();
+        t.style.setProperty('--x', `${e.clientX - r.left}px`);
+        t.style.setProperty('--y', `${e.clientY - r.top}px`);
+      });
+    });
+  }
+
   if (!hasGsap || reduced) return;
 
   /* ───────── Motion ───────── */
@@ -169,17 +175,6 @@
     document.addEventListener('pointerleave', () => gsap.to([cursor, dot], { opacity: 0, duration: 0.2 }));
     document.addEventListener('pointerenter', () => { if (shown) gsap.to([cursor, dot], { opacity: 1, duration: 0.2 }); });
 
-    // Portrait follows the pointer a little
-    const pimg = $('.portrait__frame');
-    if (pimg) {
-      const px = gsap.quickTo(pimg, 'x', { duration: 1.2, ease: 'power3' });
-      const py = gsap.quickTo(pimg, 'y', { duration: 1.2, ease: 'power3' });
-      window.addEventListener('pointermove', (e) => {
-        px((e.clientX / window.innerWidth - 0.5) * -14);
-        py((e.clientY / window.innerHeight - 0.5) * -10);
-      });
-    }
-
     // Magnetic buttons
     $$('[data-magnetic]').forEach((el) => {
       const xTo = gsap.quickTo(el, 'x', { duration: 0.6, ease: 'elastic.out(1, 0.4)' });
@@ -191,6 +186,19 @@
       });
       el.addEventListener('pointerleave', () => { xTo(0); yTo(0); });
     });
+
+    // Phone tilt follows the pointer
+    const phone = $('[data-tilt]');
+    if (phone) {
+      const rx = gsap.quickTo(phone, 'rotationX', { duration: 1, ease: 'power3' });
+      const ry = gsap.quickTo(phone, 'rotationY', { duration: 1, ease: 'power3' });
+      window.addEventListener('pointermove', (e) => {
+        const nx = e.clientX / window.innerWidth - 0.5;
+        const ny = e.clientY / window.innerHeight - 0.5;
+        ry(-14 + nx * 18);
+        rx(6 - ny * 12);
+      });
+    }
   }
 
   // Marquee that reacts to scroll velocity
@@ -215,15 +223,20 @@
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
     tl.from(heroSplit.words, { yPercent: 110, duration: 1.3, stagger: 0.045 })
       .from('[data-hero-fade]', { y: 24, autoAlpha: 0, duration: 1.1, stagger: 0.1 }, 0.35)
-      .from('.portrait__frame', { clipPath: 'inset(100% 0% 0% 0% round 280px 280px 28px 28px)', duration: 1.6, ease: 'expo.inOut' }, 0)
-      .from('.portrait img', { scale: 1.35, duration: 2, ease: 'expo.out' }, 0.3)
-      .from('.portrait__ring', { scale: 0.92, autoAlpha: 0, duration: 1.4 }, 0.7)
-      .from('.portrait__side', { autoAlpha: 0, duration: 1 }, 1)
+      .from('[data-hero-device] .phone', { y: 120, autoAlpha: 0, rotationY: -40, duration: 1.6 }, 0.2)
+      .from('.float-chip', { scale: 0.6, autoAlpha: 0, duration: 1, stagger: 0.1, ease: 'back.out(1.8)' }, 0.8)
       .from('.nav', { yPercent: -100, autoAlpha: 0, duration: 1, clearProps: 'transform,opacity,visibility' }, 0.3);
+
+    // Count the balance up on the phone card
+    const amount = $('[data-amount]');
+    if (amount) {
+      const o = { v: 0 };
+      tl.to(o, { v: 1250, duration: 1.8, ease: 'power3.out', onUpdate: () => { amount.textContent = Math.round(o.v).toLocaleString('en-US'); } }, 0.6);
+    }
 
     // Hero parallax out
     gsap.to('.hero__content', { yPercent: -18, autoAlpha: 0.2, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-    gsap.to('.portrait img', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    gsap.to('.hero__device', { yPercent: 14, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
 
     /* Section headings: masked line reveal */
     $$('[data-split]').forEach((el) => {
@@ -255,6 +268,14 @@
     $$('[data-reveal]').forEach((el, i) => {
       gsap.from(el, { y: 50, autoAlpha: 0, duration: 1.1, ease: 'expo.out', delay: (i % 4) * 0.06, scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
     });
+
+    /* Photo clip reveal + parallax */
+    const photo = $('.photo');
+    if (photo) {
+      gsap.from(photo, { clipPath: 'inset(100% 0% 0% 0% round 22px)', duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: photo, start: 'top 85%', once: true } });
+      const img = $('img', photo);
+      if (img) gsap.to(img, { yPercent: -8, ease: 'none', scrollTrigger: { trigger: photo, start: 'top bottom', end: 'bottom top', scrub: true } });
+    }
 
     /* Counters */
     $$('[data-counter]').forEach((el) => {
@@ -291,12 +312,6 @@
         gsap.from(card, { y: 70, autoAlpha: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: card, start: 'top 90%', once: true } });
       });
     });
-
-    /* NeQabty pillars */
-    $$('.pillar').forEach((el) => {
-      gsap.from(el.children, { y: 40, autoAlpha: 0, duration: 1.1, stagger: 0.08, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 80%', once: true } });
-    });
-    gsap.from('.phone--case', { y: 80, autoAlpha: 0, rotate: -4, duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.case__layout', start: 'top 75%', once: true } });
 
     /* Experience rows */
     $$('.job').forEach((job, i) => {
