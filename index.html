@@ -127,7 +127,7 @@
                 <div class="app-pay">
                   <div class="app-pay__ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5"/><circle class="ring" cx="18" cy="18" r="15.5"/></svg><span>✓</span></div>
                   <b>Payment successful</b>
-                  <small>Encrypted · Tokenized · 3-D Secure</small>
+                  <small>Encrypted · Tokenized · Verified</small>
                 </div>
               </div>
               <div class="app-screen">
@@ -370,15 +370,15 @@
           <div class="job__body"><div class="job__inner">
             <p class="job__lead">NeQabty is a fintech platform that digitizes syndicates and unions in Egypt. I own the hardest parts of the mobile apps, from payments to AI.</p>
             <ul class="job__areas">
-              <li><b>Fintech &amp; payments</b>Payment gateway checkout with 3-D Secure and deep-link return to the app. Subscription and renewal flows built as BLoC/Cubit state machines (idle → processing → paid / failed), so a member is never charged twice or left on a spinner.</li>
+              <li><b>Fintech &amp; payments</b>Payment gateway checkout with deep-link return to the app. Subscription and renewal flows built as BLoC/Cubit state machines (idle → processing → paid / failed), so a member is never charged twice or left on a spinner.</li>
               <li><b>Healthcare &amp; medical insurance</b>Building the new Egyptian Engineers Syndicate app: coverage renewal, dependents management, medical claims with document upload (compression, multipart, progress), claim status tracking and a searchable medical network on maps.</li>
-              <li><b>AI assistants — text &amp; voice</b>Led the member-support assistant, cutting response time by 40%. Text-to-text chat with streamed, token-by-token answers, and voice-to-voice: record → speech-to-text → AI answer → text-to-speech playback, over WebSocket and HTTP streams.</li>
+              <li><b>AI assistants — text &amp; voice</b>Led the member-support assistant, cutting response time by 40%. Text-to-text chat with streamed answers, and voice-to-voice: record → speech-to-text → AI answer → text-to-speech playback, over WebSocket and HTTP streams.</li>
               <li><b>Security</b>Certificate pinning, tokens in Keychain / Keystore with refresh handled by a Dio interceptor, encryption of sensitive payloads, role-based access control and obfuscated release builds.</li>
               <li><b>Flavors</b>dev / staging / prod flavors, each with its own app ID, icon, Firebase project and API config through <code>--dart-define</code>.</li>
               <li><b>CI/CD</b>GitHub Actions pipeline that analyzes, tests, builds and signs every release; Fastlane lanes ship to TestFlight and the Play internal track.</li>
               <li><b>Architecture &amp; performance</b>Feature-first Clean Architecture, BLoC/Cubit, get_it dependency injection, Streams and async flows, Arabic / English RTL localization, DevTools profiling, Hive offline cache, and unit, bloc &amp; widget tests.</li>
             </ul>
-            <ul class="chips job__chips"><li>Payment Gateway</li><li>3-D Secure</li><li>Medical Insurance</li><li>AI Chat</li><li>Voice-to-Voice</li><li>WebSocket</li><li>Certificate Pinning</li><li>Flavors</li><li>GitHub Actions</li><li>Fastlane</li><li>Clean Architecture</li><li>BLoC / Cubit</li></ul>
+            <ul class="chips job__chips"><li>Payment Gateway</li><li>Medical Insurance</li><li>AI Chat</li><li>Voice-to-Voice</li><li>WebSocket</li><li>Certificate Pinning</li><li>Flavors</li><li>GitHub Actions</li><li>Fastlane</li><li>Clean Architecture</li><li>BLoC / Cubit</li></ul>
           </div></div>
         </li>
         <li class="job">
@@ -389,11 +389,13 @@
             <span class="job__toggle" aria-hidden="true"></span>
           </button>
           <div class="job__body"><div class="job__inner">
-            <ul>
-              <li>Designed and built mobile ERP modules for HR, Finance, Inventory and Sales, improving operational efficiency by 30%.</li>
-              <li>Integrated real-time ERP APIs to keep data and dashboards in sync across departments.</li>
-              <li>Added role-based access and multi-language support, helping more user groups adopt the app.</li>
+            <p class="job__lead">Mobile ERP used across departments — HR, Finance, Inventory and Sales in one Flutter app.</p>
+            <ul class="job__areas">
+              <li><b>ERP modules</b>Designed and built mobile ERP modules for HR, Finance, Inventory and Sales, improving operational efficiency by 30%.</li>
+              <li><b>Real-time data</b>Integrated real-time ERP APIs to keep data and dashboards in sync across departments.</li>
+              <li><b>Access &amp; localization</b>Added role-based access and multi-language support, helping more user groups adopt the app.</li>
             </ul>
+            <ul class="chips job__chips"><li>ERP</li><li>REST APIs</li><li>Real-time sync</li><li>Dashboards</li><li>Role-based access</li><li>Localization</li></ul>
           </div></div>
         </li>
         <li class="job">
@@ -404,11 +406,13 @@
             <span class="job__toggle" aria-hidden="true"></span>
           </button>
           <div class="job__body"><div class="job__inner">
-            <ul>
-              <li>Built e-commerce apps with catalogs, checkout and secure payment gateways; revenue grew 15% in the first quarter after launch.</li>
-              <li>Developed video streaming features: upload, playlists, deep linking, picture-in-picture and background playback.</li>
-              <li>Set up CI/CD pipelines and multiple build flavors, making deployments 50% faster.</li>
+            <p class="job__lead">E-commerce and video streaming apps for the Saudi market, shipped through automated pipelines.</p>
+            <ul class="job__areas">
+              <li><b>E-commerce &amp; payments</b>Built e-commerce apps with catalogs, checkout and secure payment gateways; revenue grew 15% in the first quarter after launch.</li>
+              <li><b>Video streaming</b>Developed video streaming features: upload, playlists, deep linking, picture-in-picture and background playback.</li>
+              <li><b>Flavors &amp; CI/CD</b>Set up CI/CD pipelines and multiple build flavors, making deployments 50% faster.</li>
             </ul>
+            <ul class="chips job__chips"><li>Payment Gateway</li><li>Video Streaming</li><li>Deep Links</li><li>PiP</li><li>Flavors</li><li>CI/CD</li></ul>
           </div></div>
         </li>
         <li class="job">
@@ -419,11 +423,13 @@
             <span class="job__toggle" aria-hidden="true"></span>
           </button>
           <div class="job__body"><div class="job__inner">
-            <ul>
-              <li>Integrated native Android and iOS code through Method Channels to add platform-specific features.</li>
-              <li>Built real-time audio and video calling with WebRTC, increasing user retention by 25%.</li>
-              <li>Built efficient background services that improved battery life by 20%.</li>
+            <p class="job__lead">Real-time communication and native integrations for a Saudi product.</p>
+            <ul class="job__areas">
+              <li><b>Native integration</b>Integrated native Android and iOS code through Method Channels to add platform-specific features.</li>
+              <li><b>Audio &amp; video calling</b>Built real-time audio and video calling with WebRTC, increasing user retention by 25%.</li>
+              <li><b>Performance</b>Built efficient background services that improved battery life by 20%.</li>
             </ul>
+            <ul class="chips job__chips"><li>Method Channels</li><li>Kotlin / Swift</li><li>WebRTC</li><li>Background Services</li><li>Battery Optimization</li></ul>
           </div></div>
         </li>
         <li class="job">
@@ -434,9 +440,11 @@
             <span class="job__toggle" aria-hidden="true"></span>
           </button>
           <div class="job__body"><div class="job__inner">
-            <ul>
-              <li>Delivered 10+ apps across healthcare, e-commerce and education.</li>
+            <p class="job__lead">Freelance projects for clients across Egypt and the region.</p>
+            <ul class="job__areas">
+              <li><b>Delivery</b>Delivered 10+ apps across healthcare, e-commerce and education.</li>
             </ul>
+            <ul class="chips job__chips"><li>Healthcare</li><li>E-commerce</li><li>Education</li><li>Firebase</li></ul>
           </div></div>
         </li>
         <li class="job">
@@ -447,10 +455,12 @@
             <span class="job__toggle" aria-hidden="true"></span>
           </button>
           <div class="job__body"><div class="job__inner">
-            <ul>
-              <li>Built e-commerce features with Flutter and Firebase — real-time listings, authentication and cart — using BLoC/Cubit.</li>
-              <li>Worked on a hotel booking app: search filters, real-time availability, payments and REST API integration.</li>
+            <p class="job__lead">Internships where I shipped my first production Flutter features.</p>
+            <ul class="job__areas">
+              <li><b>E-commerce · Magdsoft</b>Built e-commerce features with Flutter and Firebase — real-time listings, authentication and cart — using BLoC/Cubit.</li>
+              <li><b>Hotel booking · Algoriza</b>Worked on a hotel booking app: search filters, real-time availability, payments and REST API integration.</li>
             </ul>
+            <ul class="chips job__chips"><li>BLoC / Cubit</li><li>Firebase</li><li>REST APIs</li><li>Payments</li></ul>
           </div></div>
         </li>
       </ol>
