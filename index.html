@@ -368,13 +368,17 @@
             <span class="job__toggle" aria-hidden="true"></span>
           </button>
           <div class="job__body"><div class="job__inner">
-            <ul>
-              <li>Building the new Egyptian Engineers Syndicate app: annual subscriptions, medical healthcare &amp; insurance renewal, dependents management and medical claims.</li>
-              <li>Built and maintain a subscription system with secure online payments that makes renewals simpler for members.</li>
-              <li>Led a voice &amp; text chatbot for member support, cutting response time by 40%.</li>
-              <li>Implemented encryption, authentication and access control to protect members' personal and financial data.</li>
-              <li>Structure features with Clean Architecture, BLoC/Cubit and dependency injection so modules stay testable.</li>
+            <p class="job__lead">NeQabty is a fintech platform that digitizes syndicates and unions in Egypt. I own the hardest parts of the mobile apps, from payments to AI.</p>
+            <ul class="job__areas">
+              <li><b>Fintech &amp; payments</b>Payment gateway checkout with 3-D Secure and deep-link return to the app. Subscription and renewal flows built as BLoC/Cubit state machines (idle → processing → paid / failed), so a member is never charged twice or left on a spinner.</li>
+              <li><b>Healthcare &amp; medical insurance</b>Building the new Egyptian Engineers Syndicate app: coverage renewal, dependents management, medical claims with document upload (compression, multipart, progress), claim status tracking and a searchable medical network on maps.</li>
+              <li><b>AI assistants — text &amp; voice</b>Led the member-support assistant, cutting response time by 40%. Text-to-text chat with streamed, token-by-token answers, and voice-to-voice: record → speech-to-text → AI answer → text-to-speech playback, over WebSocket and HTTP streams.</li>
+              <li><b>Security</b>Certificate pinning, tokens in Keychain / Keystore with refresh handled by a Dio interceptor, encryption of sensitive payloads, role-based access control and obfuscated release builds.</li>
+              <li><b>Flavors</b>dev / staging / prod flavors, each with its own app ID, icon, Firebase project and API config through <code>--dart-define</code>.</li>
+              <li><b>CI/CD</b>GitHub Actions pipeline that analyzes, tests, builds and signs every release; Fastlane lanes ship to TestFlight and the Play internal track.</li>
+              <li><b>Architecture &amp; performance</b>Feature-first Clean Architecture, BLoC/Cubit, get_it dependency injection, Streams and async flows, Arabic / English RTL localization, DevTools profiling, Hive offline cache, and unit, bloc &amp; widget tests.</li>
             </ul>
+            <ul class="chips job__chips"><li>Payment Gateway</li><li>3-D Secure</li><li>Medical Insurance</li><li>AI Chat</li><li>Voice-to-Voice</li><li>WebSocket</li><li>Certificate Pinning</li><li>Flavors</li><li>GitHub Actions</li><li>Fastlane</li><li>Clean Architecture</li><li>BLoC / Cubit</li></ul>
           </div></div>
         </li>
         <li class="job">
