@@ -1,17 +1,547 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amr Ramadan – Senior Flutter Engineer</title>
-    <meta name="description" content="Amr Ramadan – Senior Flutter Engineer building secure, scalable fintech and mobile apps with Flutter, BLoC/Cubit and Clean Architecture." />
-    <link rel="icon" type="image/png" href="https://github.com/Atevaz.png">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amr Ramadan – Senior Flutter Engineer</title>
+  <meta name="description" content="Amr Ramadan – Senior Flutter Engineer building secure, scalable fintech and mobile apps with Flutter, BLoC/Cubit and Clean Architecture." />
+  <meta name="theme-color" content="#09090b" />
+  <meta property="og:title" content="Amr Ramadan – Senior Flutter Engineer" />
+  <meta property="og:description" content="Secure, scalable fintech and mobile apps built with Flutter." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amrramadan0106532-code.github.io/amr-ramadan-portfolio/" />
+  <meta property="og:image" content="https://github.com/Atevaz.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2309090b'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%237cc4ff'%3EAR%3C/text%3E%3C/svg%3E" />
+  <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script>
+    document.documentElement.classList.add('js');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('reduced');
+  </script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__name">Amr Ramadan<em>— Flutter Engineer</em></span>
+      <span class="loader__count"><span data-count>0</span>%</span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
 
-    <script type="module" crossorigin src="/amr-ramadan-portfolio/assets/index-TowBCGou.js"></script>
-    <link rel="stylesheet" crossorigin href="/amr-ramadan-portfolio/assets/index-bwl9UGQI.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+  <!-- Cursor -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label">View</span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <!-- Nav -->
+  <header class="nav" data-nav>
+    <a href="#top" class="nav__logo" aria-label="Amr Ramadan, back to top">AR<em>.</em></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#about" data-link>About</a>
+      <a href="#work" data-link>Work</a>
+      <a href="#experience" data-link>Experience</a>
+      <a href="#toolkit" data-link>Toolkit</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+    <div class="nav__right">
+      <span class="status"><i></i>Open to opportunities</span>
+      <a class="btn btn--small" href="Amr-Ramadan-Flutter-CV.pdf" target="_blank" rel="noopener" data-magnetic>Résumé</a>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu" data-menu aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#about" data-link><small>01</small>About</a>
+      <a href="#work" data-link><small>02</small>Work</a>
+      <a href="#experience" data-link><small>03</small>Experience</a>
+      <a href="#toolkit" data-link><small>04</small>Toolkit</a>
+      <a href="#contact" data-link><small>05</small>Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="mailto:amr.raamadan@outlook.com">amr.raamadan@outlook.com</a>
+      <a href="Amr-Ramadan-Flutter-CV.pdf" target="_blank" rel="noopener">Download résumé ↗</a>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--2"></div>
+        <div class="aurora aurora--3"></div>
+        <div class="grid-lines"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow" data-hero-fade><span class="eyebrow__dot"></span>Senior Flutter Engineer · Cairo</p>
+        <h1 id="hero-title" class="hero__title" data-hero-title>
+          Crafting <em>secure,</em> scalable mobile apps people <em>trust</em> with their money.
+        </h1>
+        <p class="hero__lead" data-hero-fade>
+          I'm Amr — a Flutter engineer with 4+ years shipping fintech, healthcare-insurance, ERP and e-commerce apps
+          across Egypt, Saudi Arabia and Jordan.
+        </p>
+        <div class="hero__cta" data-hero-fade>
+          <a href="#work" class="btn btn--primary" data-link data-magnetic>
+            <span>See selected work</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="Amr-Ramadan-Flutter-CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost" data-magnetic>
+            <span>Download CV</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__device" data-hero-device aria-hidden="true">
+        <div class="phone" data-tilt>
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <div class="app-top"><span>9:41</span><span class="app-top__icons"><i></i><i></i><i></i></span></div>
+            <div class="app-head">
+              <div>
+                <small>Good evening,</small>
+                <strong>Eng. Member</strong>
+              </div>
+              <span class="app-avatar">AR</span>
+            </div>
+            <div class="app-card">
+              <div class="app-card__row"><small>Annual subscription</small><span class="chip-ok">Active</span></div>
+              <strong class="app-card__amount">EGP <span data-amount>1,250</span>.00</strong>
+              <div class="app-card__row"><small>Renewed · 2026</small><small>•••• 4821</small></div>
+            </div>
+            <div class="app-screens" data-screens>
+              <div class="app-screen is-active">
+                <p class="app-label">Healthcare</p>
+                <div class="app-item"><span class="app-ico app-ico--green">✚</span><div><b>Medical coverage</b><small>Family · 3 dependents</small></div><span class="tick">✓</span></div>
+                <div class="app-item"><span class="app-ico app-ico--blue">⎘</span><div><b>Claim #20431</b><small>Under review</small></div><span class="pill">2/3</span></div>
+                <div class="app-item"><span class="app-ico app-ico--amber">⌖</span><div><b>Medical network</b><small>214 providers nearby</small></div><span class="arrow">›</span></div>
+              </div>
+              <div class="app-screen">
+                <p class="app-label">Payment</p>
+                <div class="app-pay">
+                  <div class="app-pay__ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5"/><circle class="ring" cx="18" cy="18" r="15.5"/></svg><span>✓</span></div>
+                  <b>Payment successful</b>
+                  <small>Encrypted · Tokenized · 3-D Secure</small>
+                </div>
+              </div>
+              <div class="app-screen">
+                <p class="app-label">Live updates</p>
+                <div class="app-chart">
+                  <span style="--h:38%"></span><span style="--h:62%"></span><span style="--h:48%"></span><span style="--h:80%"></span><span style="--h:56%"></span><span style="--h:92%"></span><span style="--h:70%"></span>
+                </div>
+                <div class="app-item"><span class="app-ico app-ico--blue">⇄</span><div><b>Real-time stream</b><small>WebSocket · connected</small></div><span class="live-dot"></span></div>
+              </div>
+            </div>
+            <div class="app-tabbar"><i class="on"></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <span class="float-chip float-chip--1">BLoC / Cubit</span>
+        <span class="float-chip float-chip--2">Clean Architecture</span>
+        <span class="float-chip float-chip--3"><i></i>60 fps</span>
+        <span class="float-chip float-chip--4">🔒 Certificate pinning</span>
+      </div>
+
+      <div class="hero__meta" data-hero-fade>
+        <span>Based in Cairo — <b data-clock>--:--</b> local</span>
+        <a href="#about" data-link class="scroll-cue"><span></span>Scroll</a>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee" aria-label="Core technologies">
+      <div class="marquee__track" data-marquee>
+        <div class="marquee__group">
+          <span>Flutter</span><em>✦</em><span>Dart</span><em>✦</em><span>BLoC / Cubit</span><em>✦</em><span>Clean Architecture</span><em>✦</em><span>REST &amp; WebSocket</span><em>✦</em><span>Payments</span><em>✦</em><span>Security</span><em>✦</em><span>CI/CD</span><em>✦</em>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Flutter</span><em>✦</em><span>Dart</span><em>✦</em><span>BLoC / Cubit</span><em>✦</em><span>Clean Architecture</span><em>✦</em><span>REST &amp; WebSocket</span><em>✦</em><span>Payments</span><em>✦</em><span>Security</span><em>✦</em><span>CI/CD</span><em>✦</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <span class="section__label">About</span>
+      </div>
+      <div class="about__grid">
+        <div class="about__photo" data-reveal>
+          <div class="photo">
+            <span class="photo__fallback">AR</span>
+            <img src="https://github.com/Atevaz.png" alt="Portrait of Amr Ramadan" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />
+          </div>
+          <p class="photo__caption"><span class="status"><i></i>Currently at NeQabty</span></p>
+        </div>
+        <div class="about__text">
+          <p class="about__big" data-words>
+            I build mobile apps where reliability isn't optional — payments, subscriptions, medical insurance and claims.
+            At <em>NeQabty</em>, a fintech platform digitizing syndicates in Egypt, I ship features used by thousands of members,
+            structured with Clean Architecture, BLoC/Cubit and dependency injection so they stay fast, testable and secure.
+          </p>
+          <div class="stats">
+            <div class="stat" data-reveal><strong><span data-counter="4">4</span>+</strong><small>Years of professional Flutter</small></div>
+            <div class="stat" data-reveal><strong><span data-counter="10">10</span>+</strong><small>Apps delivered to production</small></div>
+            <div class="stat" data-reveal><strong><span data-counter="3">3</span></strong><small>Countries: Egypt, KSA, Jordan</small></div>
+            <div class="stat" data-reveal><strong><span data-counter="40">40</span>%</strong><small>Faster member support via chatbot</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="work__pin" data-work-pin>
+        <div class="work__intro">
+          <div class="section__head">
+            <span class="section__index">02</span>
+            <span class="section__label">Selected work</span>
+          </div>
+          <h2 id="work-title" class="display" data-split>Apps shipped <em>to real users.</em></h2>
+          <p class="muted">Fintech, healthcare, streaming and commerce — built with Flutter for Android &amp; iOS.</p>
+          <p class="work__hint" aria-hidden="true"><span></span>Scroll to explore</p>
+        </div>
+
+        <div class="work__track" data-work-track>
+          <!-- 01 -->
+          <article class="project" style="--c1:#34d399;--c2:#0ea5e9">
+            <div class="project__visual">
+              <div class="mock mock--health">
+                <div class="mock__bar"></div>
+                <div class="mock__shield">✚</div>
+                <div class="mock__row"></div><div class="mock__row"></div><div class="mock__row short"></div>
+              </div>
+              <span class="project__num">01</span>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Engineers Syndicate <em>New members app</em></h3>
+                <span class="tag tag--soon">Release pending</span>
+              </div>
+              <p>Members' app for the Egyptian Engineers Syndicate: annual subscriptions with online payment, medical healthcare &amp; insurance renewal, dependents, and medical claims with status tracking.</p>
+              <ul class="chips"><li>BLoC/Cubit</li><li>Clean Architecture</li><li>DI</li><li>Payments</li><li>Security</li></ul>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="project" style="--c1:#60a5fa;--c2:#6366f1">
+            <div class="project__visual">
+              <div class="mock mock--pay">
+                <div class="mock__card"><i></i><b></b></div>
+                <div class="mock__row"></div><div class="mock__row"></div><div class="mock__row short"></div>
+              </div>
+              <span class="project__num">02</span>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>NeQabty</h3>
+                <span class="tag">Fintech · Live</span>
+              </div>
+              <p>Fintech platform for syndicate and union members: membership renewal, subscription tracking and secure online payments, plus maps to find nearby pharmacies and service centers.</p>
+              <ul class="chips"><li>BLoC</li><li>Firebase</li><li>Payment Gateway</li><li>Google Maps</li></ul>
+              <div class="project__links">
+                <a href="https://apps.apple.com/eg/app/neqabty/id6443921118" target="_blank" rel="noopener">App Store ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.neqabty.healthcare&hl=ar" target="_blank" rel="noopener">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="project" style="--c1:#fbbf24;--c2:#f97316">
+            <div class="project__visual">
+              <div class="mock mock--car">
+                <div class="mock__bar"></div>
+                <div class="mock__car">
+                  <svg viewBox="0 0 64 32" aria-hidden="true"><path d="M6 22h52v-5l-8-3-7-7H20l-7 7-7 2z" /><circle cx="18" cy="23" r="5"/><circle cx="46" cy="23" r="5"/></svg>
+                </div>
+                <div class="mock__row"></div><div class="mock__row short"></div>
+              </div>
+              <span class="project__num">03</span>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Car Market Association <span class="ar" lang="ar" dir="rtl">رابطة سوق السيارات</span></h3>
+                <span class="tag">iOS · Live</span>
+              </div>
+              <p>Membership app for car-market traders: member registration, subscription renewal with online payment, and association services in one place.</p>
+              <ul class="chips"><li>BLoC/Cubit</li><li>REST APIs</li><li>Payment Gateway</li></ul>
+              <div class="project__links">
+                <a href="https://apps.apple.com/us/app/id6797559231" target="_blank" rel="noopener">App Store ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="project" style="--c1:#c084fc;--c2:#ec4899">
+            <div class="project__visual">
+              <div class="mock mock--video">
+                <div class="mock__player"><span>▶</span></div>
+                <div class="mock__progress"><i></i></div>
+                <div class="mock__row"></div><div class="mock__row short"></div>
+              </div>
+              <span class="project__num">04</span>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Qaaf</h3>
+                <span class="tag">Streaming · Live</span>
+              </div>
+              <p>Video streaming app with upload, channels, playlists, deep linking, picture-in-picture and background playback — shipped through CI/CD pipelines with multiple flavors.</p>
+              <ul class="chips"><li>BLoC</li><li>CI/CD</li><li>Flavors</li><li>Deep links</li></ul>
+              <div class="project__links">
+                <a href="https://apps.apple.com/us/app/%D9%82%D8%A7%D9%81-qaaf/id6444524406" target="_blank" rel="noopener">App Store ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.cliffex.qaaf" target="_blank" rel="noopener">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="project" style="--c1:#fb7185;--c2:#f59e0b">
+            <div class="project__visual">
+              <div class="mock mock--shop">
+                <div class="mock__bar"></div>
+                <div class="mock__grid"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="project__num">05</span>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Jomlah Express</h3>
+                <span class="tag">Commerce · Live</span>
+              </div>
+              <p>Wholesale e-commerce app with catalog browsing, secure checkout and order tracking, with live delivery tracking on Google Maps.</p>
+              <ul class="chips"><li>Provider</li><li>Firebase</li><li>REST API</li><li>Google Maps</li></ul>
+              <div class="project__links">
+                <a href="https://apps.apple.com/us/app/jomlah-express-%D8%AC%D9%85%D9%84%D8%A9-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D8%B3/id1507610795" target="_blank" rel="noopener">App Store ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.fancytech.jomlahexpress" target="_blank" rel="noopener">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="project" style="--c1:#a3e635;--c2:#22c55e">
+            <div class="project__visual">
+              <div class="mock mock--pet">
+                <div class="mock__bar"></div>
+                <div class="mock__paw">🐾</div>
+                <div class="mock__row"></div><div class="mock__row short"></div>
+              </div>
+              <span class="project__num">06</span>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Catwa</h3>
+                <span class="tag">Commerce · Live</span>
+              </div>
+              <p>Pet food shopping app with catalog, cart and delivery scheduling, with smooth cart and order flows.</p>
+              <ul class="chips"><li>Provider</li><li>Firebase</li><li>Google Maps</li></ul>
+              <div class="project__links">
+                <a href="https://apps.apple.com/us/app/catwah-%D9%82%D8%B7%D9%88%D9%87/id6474152928" target="_blank" rel="noopener">App Store ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.fancytechnology.catwah" target="_blank" rel="noopener">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section experience">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <span class="section__label">Experience</span>
+      </div>
+      <h2 class="display" data-split>Where I've <em>built things.</em></h2>
+
+      <ol class="jobs" data-jobs>
+        <li class="job is-open">
+          <button class="job__head" type="button" aria-expanded="true">
+            <span class="job__period">05/2025 — Present</span>
+            <span class="job__role">Flutter Developer <span>@ NeQabty</span></span>
+            <span class="job__loc">Cairo · Fintech</span>
+            <span class="job__toggle" aria-hidden="true"></span>
+          </button>
+          <div class="job__body"><div class="job__inner">
+            <ul>
+              <li>Building the new Egyptian Engineers Syndicate app: annual subscriptions, medical healthcare &amp; insurance renewal, dependents management and medical claims.</li>
+              <li>Built and maintain a subscription system with secure online payments that makes renewals simpler for members.</li>
+              <li>Led a voice &amp; text chatbot for member support, cutting response time by 40%.</li>
+              <li>Implemented encryption, authentication and access control to protect members' personal and financial data.</li>
+              <li>Structure features with Clean Architecture, BLoC/Cubit and dependency injection so modules stay testable.</li>
+            </ul>
+          </div></div>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__period">05/2024 — 05/2026</span>
+            <span class="job__role">Flutter Developer <span>@ SDS</span></span>
+            <span class="job__loc">Remote · Jordan · Part-time</span>
+            <span class="job__toggle" aria-hidden="true"></span>
+          </button>
+          <div class="job__body"><div class="job__inner">
+            <ul>
+              <li>Designed and built mobile ERP modules for HR, Finance, Inventory and Sales, improving operational efficiency by 30%.</li>
+              <li>Integrated real-time ERP APIs to keep data and dashboards in sync across departments.</li>
+              <li>Added role-based access and multi-language support, helping more user groups adopt the app.</li>
+            </ul>
+          </div></div>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__period">01/2024 — 10/2024</span>
+            <span class="job__role">Flutter Developer <span>@ Code700</span></span>
+            <span class="job__loc">Remote · Saudi Arabia</span>
+            <span class="job__toggle" aria-hidden="true"></span>
+          </button>
+          <div class="job__body"><div class="job__inner">
+            <ul>
+              <li>Built e-commerce apps with catalogs, checkout and secure payment gateways; revenue grew 15% in the first quarter after launch.</li>
+              <li>Developed video streaming features: upload, playlists, deep linking, picture-in-picture and background playback.</li>
+              <li>Set up CI/CD pipelines and multiple build flavors, making deployments 50% faster.</li>
+            </ul>
+          </div></div>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__period">01/2023 — 01/2024</span>
+            <span class="job__role">Flutter Developer <span>@ TX</span></span>
+            <span class="job__loc">Remote · Saudi Arabia</span>
+            <span class="job__toggle" aria-hidden="true"></span>
+          </button>
+          <div class="job__body"><div class="job__inner">
+            <ul>
+              <li>Integrated native Android and iOS code through Method Channels to add platform-specific features.</li>
+              <li>Built real-time audio and video calling with WebRTC, increasing user retention by 25%.</li>
+              <li>Built efficient background services that improved battery life by 20%.</li>
+            </ul>
+          </div></div>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__period">01/2022 — 12/2023</span>
+            <span class="job__role">Freelance Flutter Developer <span>@ Mostaql</span></span>
+            <span class="job__loc">Remote · Egypt</span>
+            <span class="job__toggle" aria-hidden="true"></span>
+          </button>
+          <div class="job__body"><div class="job__inner">
+            <ul>
+              <li>Delivered 10+ apps across healthcare, e-commerce and education.</li>
+            </ul>
+          </div></div>
+        </li>
+        <li class="job">
+          <button class="job__head" type="button" aria-expanded="false">
+            <span class="job__period">06/2022 — 10/2022</span>
+            <span class="job__role">Flutter Intern <span>@ Magdsoft &amp; Algoriza</span></span>
+            <span class="job__loc">Cairo · Egypt</span>
+            <span class="job__toggle" aria-hidden="true"></span>
+          </button>
+          <div class="job__body"><div class="job__inner">
+            <ul>
+              <li>Built e-commerce features with Flutter and Firebase — real-time listings, authentication and cart — using BLoC/Cubit.</li>
+              <li>Worked on a hotel booking app: search filters, real-time availability, payments and REST API integration.</li>
+            </ul>
+          </div></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Toolkit -->
+    <section id="toolkit" class="section toolkit">
+      <div class="section__head">
+        <span class="section__index">04</span>
+        <span class="section__label">Toolkit</span>
+      </div>
+      <h2 class="display" data-split>What I <em>work with.</em></h2>
+
+      <div class="bento" data-bento>
+        <div class="tile tile--wide" data-reveal>
+          <span class="tile__icon">◈</span>
+          <h3>Architecture</h3>
+          <p>Clean Architecture, MVVM, SOLID, dependency injection with get_it, flavors and localization — code that scales with the team.</p>
+          <ul class="chips"><li>Clean Architecture</li><li>MVVM</li><li>SOLID</li><li>get_it</li><li>Flavors</li></ul>
+        </div>
+        <div class="tile" data-reveal>
+          <span class="tile__icon">⟲</span>
+          <h3>State</h3>
+          <ul class="chips"><li>BLoC / Cubit</li><li>Riverpod</li><li>Provider</li><li>GetX</li></ul>
+        </div>
+        <div class="tile" data-reveal>
+          <span class="tile__icon">⇄</span>
+          <h3>APIs &amp; real-time</h3>
+          <ul class="chips"><li>REST</li><li>WebSocket</li><li>WebRTC</li><li>GraphQL</li><li>Firebase</li><li>FCM</li></ul>
+        </div>
+        <div class="tile" data-reveal>
+          <span class="tile__icon">⛨</span>
+          <h3>Security</h3>
+          <ul class="chips"><li>Certificate pinning</li><li>Secure storage</li><li>Obfuscation</li><li>Encryption</li></ul>
+        </div>
+        <div class="tile" data-reveal>
+          <span class="tile__icon">$</span>
+          <h3>Fintech</h3>
+          <ul class="chips"><li>Payment gateways</li><li>Subscriptions</li><li>Insurance &amp; claims</li></ul>
+        </div>
+        <div class="tile" data-reveal>
+          <span class="tile__icon">⚡</span>
+          <h3>Performance</h3>
+          <ul class="chips"><li>DevTools profiling</li><li>Jank detection</li><li>App size</li><li>Background services</li></ul>
+        </div>
+        <div class="tile" data-reveal>
+          <span class="tile__icon">⌘</span>
+          <h3>Native</h3>
+          <ul class="chips"><li>Method Channels</li><li>Kotlin plugins</li><li>Swift plugins</li></ul>
+        </div>
+        <div class="tile tile--wide" data-reveal>
+          <span class="tile__icon">✓</span>
+          <h3>Testing &amp; delivery</h3>
+          <p>Unit, widget and integration tests, CI/CD with GitHub Actions and Fastlane, and releases through App Store Connect and Play Console.</p>
+          <ul class="chips"><li>Unit &amp; widget tests</li><li>GitHub Actions</li><li>Fastlane</li><li>Hive</li><li>SQLite</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <span class="section__label">Contact</span>
+      </div>
+      <h2 class="contact__title" data-split>Let's build something <em>worth shipping.</em></h2>
+      <div class="contact__actions">
+        <a href="mailto:amr.raamadan@outlook.com" class="btn btn--primary btn--big" data-magnetic>
+          <span>amr.raamadan@outlook.com</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <button type="button" class="btn btn--ghost" data-copy="amr.raamadan@outlook.com" data-magnetic><span>Copy email</span></button>
+      </div>
+      <ul class="socials">
+        <li><a href="https://www.linkedin.com/in/amr-ramadan-92a4841b2/" target="_blank" rel="noopener">LinkedIn<span>↗</span></a></li>
+        <li><a href="https://github.com/Atevaz" target="_blank" rel="noopener">GitHub<span>↗</span></a></li>
+        <li><a href="tel:+201065328644">+20 106 532 8644<span>↗</span></a></li>
+        <li><a href="Amr-Ramadan-Flutter-CV.pdf" target="_blank" rel="noopener">Résumé (PDF)<span>↗</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year>2026</span> Amr Ramadan</span>
+    <span>B.Sc. Computers &amp; AI — Helwan University</span>
+    <a href="#top" data-link>Back to top ↑</a>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/SplitText.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/site.js"></script>
+</body>
 </html>
-
