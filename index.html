@@ -14,7 +14,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2309090b'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%237cc4ff'%3EAR%3C/text%3E%3C/svg%3E" />
   <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site.css?v=5" />
   <script>
     document.documentElement.classList.add('js');
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('reduced');
@@ -224,7 +224,7 @@
                 <h3>Engineers Syndicate <em>New members app</em></h3>
                 <span class="tag tag--soon">Release pending</span>
               </div>
-              <p>Members' app for the Egyptian Engineers Syndicate: annual subscriptions with online payment, medical healthcare &amp; insurance renewal, dependents, and medical claims with status tracking.</p>
+              <p>Members&#39; app for the Egyptian Engineers Syndicate. Members renew their yearly subscription and medical coverage, add dependents and file medical claims. The hard part was keeping every claim and payment in sync with the insurer and the syndicate, so each request has clear states and members always see where it stands.</p>
               <ul class="chips"><li>BLoC/Cubit</li><li>Clean Architecture</li><li>DI</li><li>Payments</li><li>Security</li></ul>
             </div>
           </article>
@@ -243,7 +243,7 @@
                 <h3>NeQabty</h3>
                 <span class="tag">Fintech · Live</span>
               </div>
-              <p>Fintech platform for syndicate and union members: membership renewal, subscription tracking and secure online payments, plus maps to find nearby pharmacies and service centers.</p>
+              <p>Fintech app for syndicate and union members in Egypt. Members renew their membership, track subscriptions, pay online and find nearby pharmacies and service centers on the map. The hard part was payments: BLoC handles sessions, subscriptions and checkout, so an interrupted payment never leaves a member&#39;s account in a broken state.</p>
               <ul class="chips"><li>BLoC</li><li>Firebase</li><li>Payment Gateway</li><li>Google Maps</li></ul>
               <div class="project__links">
                 <a href="https://apps.apple.com/eg/app/neqabty/id6443921118" target="_blank" rel="noopener">App Store ↗</a>
@@ -269,8 +269,8 @@
                 <h3>Car Market Association <span class="ar" lang="ar" dir="rtl">رابطة سوق السيارات</span></h3>
                 <span class="tag">iOS · Live</span>
               </div>
-              <p>Membership app for car-market traders: member registration, subscription renewal with online payment, and association services in one place.</p>
-              <ul class="chips"><li>BLoC/Cubit</li><li>REST APIs</li><li>Payment Gateway</li></ul>
+              <p>Used-car marketplace for Egypt. Buyers browse listings from individuals and verified showrooms, filter by make, model, year and price, read inspection reports and book viewings. The hard part was data: thousands of image-heavy listings, kept smooth with pagination, lazy loading and image caching, plus social sign-in and deep links.</p>
+              <ul class="chips"><li>Pagination</li><li>Image Caching</li><li>Advanced Filters</li><li>Social Auth</li><li>Deep Links</li><li>Push Notifications</li></ul>
               <div class="project__links">
                 <a href="https://apps.apple.com/us/app/id6797559231" target="_blank" rel="noopener">App Store ↗</a>
               </div>
@@ -292,7 +292,7 @@
                 <h3>Qaaf</h3>
                 <span class="tag">Streaming · Live</span>
               </div>
-              <p>Video streaming app with upload, channels, playlists, deep linking, picture-in-picture and background playback — shipped through CI/CD pipelines with multiple flavors.</p>
+              <p>Video streaming app with channels and playlists. Users upload videos, follow channels, open shared links straight into a video and keep watching in picture-in-picture or in the background. The hard part was playback: BLoC manages the player, uploads and background services, and CI/CD with several flavors keeps releases quick.</p>
               <ul class="chips"><li>BLoC</li><li>CI/CD</li><li>Flavors</li><li>Deep links</li></ul>
               <div class="project__links">
                 <a href="https://apps.apple.com/us/app/%D9%82%D8%A7%D9%81-qaaf/id6444524406" target="_blank" rel="noopener">App Store ↗</a>
@@ -315,7 +315,7 @@
                 <h3>Jomlah Express</h3>
                 <span class="tag">Commerce · Live</span>
               </div>
-              <p>Wholesale e-commerce app with catalog browsing, secure checkout and order tracking, with live delivery tracking on Google Maps.</p>
+              <p>Wholesale e-commerce app. Buyers browse the catalog, check out securely and follow each order on Google Maps until it reaches them. The hard part was state: the cart, product filters and real-time order updates had to stay consistent across every screen, which I handled with Provider and Firebase.</p>
               <ul class="chips"><li>Provider</li><li>Firebase</li><li>REST API</li><li>Google Maps</li></ul>
               <div class="project__links">
                 <a href="https://apps.apple.com/us/app/jomlah-express-%D8%AC%D9%85%D9%84%D8%A9-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D8%B3/id1507610795" target="_blank" rel="noopener">App Store ↗</a>
@@ -339,7 +339,7 @@
                 <h3>Catwa</h3>
                 <span class="tag">Commerce · Live</span>
               </div>
-              <p>Pet food shopping app with catalog, cart and delivery scheduling, with smooth cart and order flows.</p>
+              <p>Pet food shopping app. Customers browse the catalog, fill their cart and choose a delivery time that suits them. The hard part was the order flow: the cart, user sessions and delivery scheduling share state across many screens, and Provider keeps them consistent from the first tap to checkout.</p>
               <ul class="chips"><li>Provider</li><li>Firebase</li><li>Google Maps</li></ul>
               <div class="project__links">
                 <a href="https://apps.apple.com/us/app/catwah-%D9%82%D8%B7%D9%88%D9%87/id6474152928" target="_blank" rel="noopener">App Store ↗</a>
@@ -556,6 +556,6 @@
   <script src="assets/vendor/ScrollTrigger.min.js"></script>
   <script src="assets/vendor/SplitText.min.js"></script>
   <script src="assets/vendor/lenis.min.js"></script>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=5"></script>
 </body>
 </html>
