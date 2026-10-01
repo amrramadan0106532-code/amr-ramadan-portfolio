@@ -2,33 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Amr Ramadan – Senior Flutter Engineer</title>
+<title>Amr Ramadan Resume</title>
 <style>
-  @page { size: A4; margin: 13mm 14mm; }
+  @font-face { font-family: "Open Sans"; src: url("fonts/open-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+  @font-face { font-family: "Open Sans"; src: url("fonts/open-sans-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+  @font-face { font-family: "Open Sans"; src: url("fonts/open-sans-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-style: normal; }
+  @page { size: A4; margin: 22pt 34pt 20pt; }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: Arial, "Liberation Sans", Helvetica, sans-serif; color: #1f2937; font-size: 9.6pt; line-height: 1.42; }
+  body { margin: 0; font-family: "Open Sans", Arial, sans-serif; font-size: 9pt; line-height: 9.75pt; color: #000; }
   a { color: inherit; text-decoration: none; }
-  header { border-bottom: 2px solid #1d4ed8; padding-bottom: 8px; margin-bottom: 10px; }
-  h1 { font-size: 23pt; margin: 0; letter-spacing: -0.3px; color: #0f172a; font-weight: 800; }
-  .headline { font-size: 11.5pt; color: #1d4ed8; font-weight: 600; margin: 2px 0 6px; }
-  .contact { font-size: 8.9pt; color: #374151; display: flex; flex-wrap: wrap; gap: 4px 14px; }
-  .contact a { color: #1d4ed8; }
-  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1.1px; color: #1d4ed8; margin: 12px 0 6px; padding-bottom: 3px; border-bottom: 1px solid #dbe3f0; font-weight: 700; }
   p { margin: 0; }
-  ul { margin: 3px 0 0; padding-left: 15px; }
-  li { margin: 1.5px 0; }
-  .item { margin-bottom: 8px; break-inside: avoid; }
-  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
-  .title { font-weight: 700; color: #0f172a; font-size: 10.2pt; }
-  .org { color: #1d4ed8; font-weight: 600; }
-  .meta { color: #6b7280; font-size: 8.8pt; white-space: nowrap; }
-  .sub { color: #6b7280; font-size: 8.8pt; }
-  .tech { color: #4b5563; font-size: 8.7pt; margin-top: 2px; }
-  .tech b { color: #374151; font-weight: 600; }
-  .skills { display: grid; grid-template-columns: 150px 1fr; gap: 3px 10px; }
-  .skills .k { font-weight: 600; color: #0f172a; }
-  .tag { display: inline-block; font-size: 7.8pt; font-weight: 600; color: #92400e; background: #fef3c7; border-radius: 3px; padding: 0 5px; margin-left: 6px; vertical-align: 1px; }
-  .live { color: #065f46; background: #d1fae5; }
+
+  header { text-align: center; }
+  h1 { margin: 0; font-size: 20pt; line-height: 25pt; font-weight: 700; }
+  .headline { font-size: 14pt; line-height: 19pt; font-style: italic; }
+  .contact { display: flex; justify-content: center; flex-wrap: wrap; gap: 0 13pt; margin-top: 7pt; }
+  .contact a { display: inline-flex; align-items: center; gap: 4pt; line-height: 12pt; }
+  .ico { width: 12.8pt; height: 12.8pt; border-radius: 3pt; background: #000; display: inline-flex; align-items: center; justify-content: center; }
+  .ico svg { width: 8pt; height: 8pt; fill: #fff; }
+
+  h2 { margin: 13pt 0 6pt; padding: 1.5pt 0 2pt; border-top: 0.75pt solid #000; border-bottom: 0.75pt solid #000; text-align: center; font-size: 12pt; line-height: 16pt; font-weight: 700; }
+  .summary { text-align: justify; }
+
+  .entry { display: grid; grid-template-columns: 105.5pt 1fr; margin-bottom: 6.5pt; break-inside: avoid; }
+  .entry .when { white-space: nowrap; }
+  .entry b { font-weight: 700; }
+  .entry i { font-style: italic; display: block; }
+  ul { margin: 0; padding-left: 15.2pt; }
+  li { margin: 0; padding-left: 0; }
+  li::marker { font-size: 9pt; }
+
+  .project { margin-bottom: 6.5pt; break-inside: avoid; }
+  .project .name { font-weight: 700; }
+  .project .meta { font-style: italic; }
+  .project ul ul { padding-left: 11pt; list-style: disc; }
+
+  .skill { margin-bottom: 5.5pt; break-inside: avoid; }
+  .skill b { display: block; }
+  .skill p { padding-left: 7.5pt; }
+
+  .langs { display: grid; grid-template-columns: 1fr 1fr; }
+  .langs p { padding-left: 7.5pt; }
+  .langs span { color: #333; }
   .page-break { break-before: page; }
 </style>
 </head>
@@ -36,161 +51,196 @@
 
 <header>
   <h1>Amr Ramadan</h1>
-  <div class="headline">Senior Flutter Engineer · Fintech &amp; Mobile</div>
+  <div class="headline">Senior Mobile Developer (Flutter)</div>
   <div class="contact">
-    <span>Cairo, Egypt</span>
-    <a href="mailto:amr.raamadan@outlook.com">amr.raamadan@outlook.com</a>
-    <a href="tel:+201065328644">+20 106 532 8644</a>
-    <a href="https://github.com/Atevaz">github.com/Atevaz</a>
-    <a href="https://www.linkedin.com/in/amr-ramadan-92a4841b2/">LinkedIn</a>
-    <a href="https://amrramadan0106532-code.github.io/amr-ramadan-portfolio/">Portfolio</a>
+    <a href="mailto:amr.raamadan@outlook.com"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v.4l-9 5.6-9-5.6zM3 9.2l9 5.6 9-5.6v8.3a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/></svg></span>amr.raamadan@outlook.com</a>
+    <a href="tel:+201065328644"><span class="ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>+201065328644</a>
+    <a><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>Cairo,Egypt</a>
+    <a href="https://github.com/Atevaz"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></span>GitHub</a>
+    <a href="https://www.linkedin.com/in/amr-ramadan-92a4841b2/"><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 3.5A1.75 1.75 0 1 1 5 7a1.75 1.75 0 0 1 0-3.5zM3.5 8.5h3V20h-3zM9 8.5h2.9v1.6h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-6.1c0-1.45-.03-3.32-2.02-3.32-2.03 0-2.34 1.58-2.34 3.21V20H9z"/></svg></span>LinkedIn</a>
+    <a href="https://amrramadan0106532-code.github.io/amr-ramadan-portfolio/"><span class="ico"><svg viewBox="0 0 24 24"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.5-3.5a3 3 0 0 1 4.2 4.2l-2 2a1 1 0 0 1-1.4-1.4l2-2a1 1 0 0 0-1.4-1.4L12 13.4a1 1 0 0 1-1.4 0zm2.8-2.8a1 1 0 0 1 0 1.4l-3.5 3.5a3 3 0 0 1-4.2-4.2l2-2a1 1 0 0 1 1.4 1.4l-2 2a1 1 0 0 0 1.4 1.4L12 10.6a1 1 0 0 1 1.4 0z"/></svg></span>Portfolio</a>
   </div>
 </header>
 
-<section>
-  <h2>Summary</h2>
-  <p>Flutter engineer with 4+ years of professional experience building secure, scalable mobile apps for fintech, syndicate services, ERP, and e-commerce. At NeQabty, a fintech platform that digitizes syndicates and unions in Egypt, I build payment, subscription, and medical-insurance flows used by thousands of members. I work mainly with Dart, BLoC/Cubit, Clean Architecture, dependency injection, REST APIs, and real-time streams (WebSocket, WebRTC). I also have hands-on experience with mobile security, performance tuning, native Android/iOS integration, and CI/CD. I've shipped production apps for users in Egypt, Saudi Arabia, and Jordan.</p>
-</section>
+<h2>Summary</h2>
+<p class="summary">Senior Flutter Developer with 4+ years of experience building secure, scalable mobile applications for fintech, healthcare insurance, ERP systems, and e-commerce. Strong in Dart, BLoC/Cubit, Clean Architecture, dependency injection, REST APIs, and real-time data streams (WebSocket, WebRTC). At NeQabty, a fintech platform for syndicates and unions in Egypt, I build online payments and subscriptions, medical insurance and claims flows, and text and voice AI assistants, and I own app security, build flavors, and the CI/CD pipeline. Delivered production apps for users across Egypt, Saudi Arabia, and Jordan.</p>
 
-<section>
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <span class="k">Core</span><span>Dart, Flutter, asynchronous programming (Futures, Streams), custom animations, responsive UI</span>
-    <span class="k">Architecture</span><span>Clean Architecture, MVVM, SOLID, Dependency Injection (get_it), OOP, Flavors, Localization</span>
-    <span class="k">State Management</span><span>BLoC / Cubit, Riverpod, Provider, GetX</span>
-    <span class="k">APIs &amp; Real-time</span><span>REST APIs, WebSocket, WebRTC, GraphQL, Firebase (Auth, Firestore, Cloud Functions, FCM), push notifications, deep links</span>
-    <span class="k">Fintech &amp; Payments</span><span>Payment gateway integration, subscriptions and renewals, insurance and claims flows</span>
-    <span class="k">Security</span><span>Certificate pinning, secure storage, code obfuscation, encryption, authentication and access control</span>
-    <span class="k">Performance</span><span>Flutter DevTools (memory profiling, jank detection, rebuild tracking), app size and build optimization, background services</span>
-    <span class="k">Native</span><span>Method Channels, native SDK integration (Kotlin / Swift plugins)</span>
-    <span class="k">Testing &amp; DevOps</span><span>Unit, widget, and integration testing; CI/CD (GitHub Actions, Fastlane); Git; App Store &amp; Play Console releases</span>
-    <span class="k">Storage</span><span>Hive, SQLite, offline-first architecture</span>
-  </div>
-</section>
-
-<section>
-  <h2>Professional Experience</h2>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Flutter Developer</span> · <span class="org">NeQabty (Fintech)</span></div><span class="meta">05/2025 – Present · Cairo, Egypt</span></div>
+<h2>Education</h2>
+<div class="entry">
+  <div class="when">09/2018 – 06/2022<br>Cairo, Egypt</div>
+  <div>
+    <b>Bachelor of Computer and Artificial Intelligence</b>
+    <i>Helwan University</i>
     <ul>
-      <li>Building the new version of the Egyptian Engineers Syndicate app: annual membership subscriptions, medical healthcare and insurance renewal, dependents management, and medical claims.</li>
-      <li>Built and maintain a subscription system with secure online payments, which makes renewals and payments simpler for members.</li>
-      <li>Led the member-support AI assistant (text-to-text and voice-to-voice: speech-to-text, streamed answers, text-to-speech), cutting response time by 40%.</li>
-      <li>Implemented certificate pinning, secure token storage, encryption, and access control to protect members' personal and financial data.</li>
-      <li>Set up dev / staging / prod flavors and a CI/CD pipeline with GitHub Actions and Fastlane (obfuscated, signed releases to TestFlight and Play).</li>
-      <li>Structure features with Clean Architecture, BLoC/Cubit, and dependency injection so modules stay testable and easy to maintain.</li>
+      <li>Graduation Project: Developed a mobile application for creating personalized nutrition plans using AI-powered image recognition to analyze food nutrients (carbs, proteins, fats).</li>
+      <li>Trained a deep learning model with TensorFlow on a large food image dataset and integrated it with a Flutter frontend and Firebase backend for seamless functionality.</li>
     </ul>
   </div>
+</div>
 
-  <div class="item">
-    <div class="row"><div><span class="title">Flutter Developer</span> · <span class="org">SDS</span></div><span class="meta">05/2024 – 05/2026 · Part-time, Remote (Jordan)</span></div>
+<h2>Professional Experience</h2>
+<div class="entry">
+  <div class="when">05/2025 – Present<br>Cairo, Egypt</div>
+  <div>
+    <b>Flutter Developer at NeQabty (Fintech)</b>
     <ul>
-      <li>Designed and built mobile ERP modules for HR, Finance, Inventory, and Sales, improving operational efficiency by 30%.</li>
-      <li>Integrated real-time ERP APIs to keep data and dashboards in sync across departments.</li>
-      <li>Added role-based access and multi-language support, which helped more user groups adopt the app.</li>
+      <li>Building the new Egyptian Engineers Syndicate app: annual subscriptions, medical healthcare and insurance renewal, dependents management, and medical claims with document upload and status tracking.</li>
+      <li>Developed subscription and online payment flows with payment gateway integration, modeled as BLoC/Cubit states so an interrupted payment never leaves a member's account in a broken state.</li>
+      <li>Led the member-support AI assistant, both text-to-text and voice-to-voice (speech-to-text, streamed answers, text-to-speech) over WebSocket, reducing response time by 40%.</li>
+      <li>Implemented app security: certificate pinning, secure token storage, encryption, role-based access control, and code obfuscation to protect members' personal and financial data.</li>
+      <li>Set up dev, staging, and prod flavors and CI/CD with GitHub Actions and Fastlane; structured features with Clean Architecture, BLoC/Cubit, and get_it.</li>
     </ul>
   </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Flutter Developer</span> · <span class="org">Code700</span></div><span class="meta">01/2024 – 10/2024 · Remote (Saudi Arabia)</span></div>
+</div>
+<div class="entry">
+  <div class="when">05/2024 – 05/2026<br>(Part-time / Remote)</div>
+  <div>
+    <b>Flutter Developer at SDS</b>
     <ul>
-      <li>Built e-commerce apps with product catalogs, checkout, and secure payment gateways; revenue grew 15% in the first quarter after launch.</li>
-      <li>Developed video streaming features: upload, playlists, deep linking, picture-in-picture, and background playback.</li>
-      <li>Set up CI/CD pipelines and multiple build flavors, making deployments 50% faster.</li>
+      <li>Designed and developed mobile ERP modules for HR, Finance, Inventory, and Sales, improving operational efficiency by 30%.</li>
+      <li>Integrated real-time ERP APIs for synchronization and dashboard updates, ensuring seamless data flow across departments.</li>
+      <li>Enhanced user experience through role-based access and multi-language support, increasing adoption rates among diverse user groups.</li>
     </ul>
   </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Flutter Developer</span> · <span class="org">TX</span></div><span class="meta">01/2023 – 01/2024 · Remote (Saudi Arabia)</span></div>
+</div>
+<div class="entry">
+  <div class="when">01/2024 – 10/2024<br>Remote, Saudi&nbsp;Arabia</div>
+  <div>
+    <b>Flutter Developer at Code700</b>
     <ul>
-      <li>Integrated native Android and iOS code through Method Channels to add platform-specific features.</li>
-      <li>Built real-time audio and video calling with WebRTC, increasing user retention by 25%.</li>
-      <li>Built efficient background services that improved battery life by 20%.</li>
+      <li>Built e-commerce apps with checkout systems, secure payment gateways, and product catalogs, increasing revenue by 15% in the first quarter post-launch.</li>
+      <li>Developed video streaming features (upload, playlists, deep linking, PiP, background playback) using Flutter, increasing user engagement.</li>
+      <li>Configured CI/CD pipelines and managed multiple build flavors, optimizing release cycles and improving deployment efficiency by 50%.</li>
     </ul>
   </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Flutter Developer Intern</span> · <span class="org">Magdsoft</span> &amp; <span class="org">Algoriza</span></div><span class="meta">06/2022 – 10/2022 · Cairo, Egypt</span></div>
+</div>
+<div class="entry">
+  <div class="when">01/2023 – 01/2024<br>Remote, Saudi&nbsp;Arabia</div>
+  <div>
+    <b>Flutter Developer at TX</b>
     <ul>
-      <li>Built e-commerce features with Flutter and Firebase (real-time product listings, authentication, cart) using BLoC/Cubit.</li>
-      <li>Worked on a hotel booking app: search filters, real-time availability, payments, and REST API integration.</li>
+      <li>Integrated native Android/iOS code via Method Channels, improving cross-platform functionality and expanding the app's feature set.</li>
+      <li>Developed real-time audio &amp; video calling using WebRTC, enhancing communication features and increasing user retention by 25%.</li>
+      <li>Optimized device-level performance by building efficient background services, improving battery life by 20%.</li>
     </ul>
   </div>
-</section>
-
-<section>
-  <h2>Selected Projects</h2>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Egyptian Engineers Syndicate – New Version</span><span class="tag">Release pending</span></div><span class="meta">Android &amp; iOS · NeQabty</span></div>
+</div>
+<div class="entry">
+  <div class="when">06/2022 – 10/2022<br>Cairo, Egypt</div>
+  <div>
+    <b>Flutter Developer intern at Magdsoft</b>
     <ul>
-      <li>Members' app for the Engineers Syndicate: annual subscription renewal and online payment.</li>
-      <li>Healthcare and medical insurance: coverage renewal, dependents management, medical claims with status tracking, and a medical network guide.</li>
-      <li>Protects members' personal and payment data with encryption, authentication, and access control.</li>
-    </ul>
-    <div class="tech"><b>Tech:</b> Flutter, Dart, BLoC/Cubit, Clean Architecture, Dependency Injection, REST APIs, Payment Gateway</div>
-  </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">NeQabty</span><span class="tag live">Live on stores</span></div><span class="meta">Android &amp; iOS</span></div>
-    <ul>
-      <li>Fintech app for syndicate and union members: membership renewal, subscription tracking, and online payments.</li>
-      <li>Google Maps integration to find nearby pharmacies and service centers.</li>
-      <li>BLoC handles secure sessions, payments, and subscriptions.</li>
-    </ul>
-    <div class="tech"><b>Tech:</b> Flutter, Dart, BLoC, Firebase, Payment Gateway, Google Maps</div>
-  </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Car Market Association (رابطة سوق السيارات)</span><span class="tag live">Live on App Store</span></div><span class="meta">iOS</span></div>
-    <ul>
-      <li>Used-car marketplace for Egypt: listings from individuals and verified showrooms, advanced filters (make, model, year, price, condition), inspection reports, viewing bookings, favorites, and selling flow.</li>
-      <li>Kept large, image-heavy listing data fast with pagination, lazy loading, and image caching; added social sign-in, deep links, and instant alerts.</li>
-    </ul>
-    <div class="tech"><b>Tech:</b> Flutter, Dart, BLoC/Cubit, REST APIs, Social Auth, Deep Links, Push Notifications</div>
-  </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Qaaf</span><span class="tag live">Live on stores</span></div><span class="meta">Android &amp; iOS</span></div>
-    <ul>
-      <li>Video streaming app: upload, channels, playlists, deep linking, picture-in-picture, and background playback.</li>
-      <li>BLoC manages playback, uploads, and background services; CI/CD pipelines with multiple flavors speed up releases.</li>
-    </ul>
-    <div class="tech"><b>Tech:</b> Flutter, Dart, BLoC, CI/CD, Flavors</div>
-  </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Jomlah Express</span><span class="tag live">Live on stores</span></div><span class="meta">Android &amp; iOS</span></div>
-    <ul>
-      <li>Wholesale e-commerce app with catalog browsing, secure checkout, and order tracking with Google Maps for delivery.</li>
-    </ul>
-    <div class="tech"><b>Tech:</b> Flutter, Dart, Firebase, REST APIs, Payment Gateway, Google Maps, Provider</div>
-  </div>
-
-  <div class="item">
-    <div class="row"><div><span class="title">Catwa</span><span class="tag live">Live on stores</span></div><span class="meta">Android &amp; iOS</span></div>
-    <ul>
-      <li>Pet food shopping app with catalog, cart, and delivery scheduling.</li>
-    </ul>
-    <div class="tech"><b>Tech:</b> Flutter, Dart, Firebase, Google Maps, Provider</div>
-  </div>
-</section>
-
-<section>
-  <h2>Education</h2>
-  <div class="item">
-    <div class="row"><div><span class="title">Bachelor of Computers and Artificial Intelligence</span> · <span class="org">Helwan University</span></div><span class="meta">2018 – 2022 · Cairo, Egypt</span></div>
-    <ul>
-      <li>Graduation project: nutrition-planning app that uses a TensorFlow image-recognition model to estimate food nutrients, with a Flutter frontend and Firebase backend.</li>
+      <li>Developed e-commerce mobile features using Flutter and Firebase, including real-time product listings and user authentication flows.</li>
+      <li>Implemented BLoC and Cubit for state management across shopping cart, product catalog, and authentication modules.</li>
     </ul>
   </div>
-</section>
+</div>
+<div class="entry">
+  <div class="when">06/2022 – 10/2022<br>Cairo, Egypt</div>
+  <div>
+    <b>Flutter Developer intern at Algoriza</b>
+    <ul>
+      <li>Contributed to a Flutter-based hotel reservation app, implementing search filters, real-time booking availability, and payment processing.</li>
+      <li>Integrated RESTful APIs for dynamic data fetching, booking confirmation, and cancellation handling.</li>
+    </ul>
+  </div>
+</div>
 
-<section>
-  <h2>Languages</h2>
-  <p>Arabic – Native &nbsp;·&nbsp; English – Advanced (written and spoken)</p>
-</section>
+<h2 class="page-break">Projects</h2>
+<div class="project">
+  <p class="name">Egyptian Engineers Syndicate</p>
+  <p class="meta">Android &amp; iOS | Status: In development (release pending)</p>
+  <ul>
+    <li>Technologies: Flutter, Dart, BLoC/Cubit, Clean Architecture, Dependency Injection, REST API, Payment Gateway</li>
+    <li>Description:
+      <ul>
+        <li>Members' app: yearly subscription and medical coverage renewal, dependents, and medical claims.</li>
+        <li>Kept claims and payments in sync with the insurer, with clear states so members always see where a request stands.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="project">
+  <p class="name">Neqabty</p>
+  <p class="meta">Android &amp; iOS | Status: Live on stores</p>
+  <ul>
+    <li>Technologies: Flutter, Dart, Firebase, Payment Gateway, Google Maps, Bloc</li>
+    <li>Description:
+      <ul>
+        <li>Fintech app for syndicate members: membership renewal, subscriptions, online payments, and nearby pharmacies on the map.</li>
+        <li>Bloc handles sessions and checkout so an interrupted payment never breaks a member's account.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="project">
+  <p class="name">Car Market Association</p>
+  <p class="meta">iOS | Status: Live on App Store</p>
+  <ul>
+    <li>Technologies: Flutter, Dart, Bloc, REST API, Social Authentication, Deep Links, Push Notifications</li>
+    <li>Description:
+      <ul>
+        <li>Used-car marketplace: listings from individuals and showrooms, advanced filters, inspection reports, and viewing bookings.</li>
+        <li>Handled large, image-heavy data with pagination, lazy loading, and image caching; social sign-in and deep links.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="project">
+  <p class="name">Qaaf</p>
+  <p class="meta">Android &amp; iOS | Status: Live on stores</p>
+  <ul>
+    <li>Technologies: Flutter, Dart, CI/CD, Flavors, Bloc</li>
+    <li>Description:
+      <ul>
+        <li>Video streaming app with upload, channels, playlists, deep linking, picture-in-picture, and background playback.</li>
+        <li>Bloc manages the player, uploads, and background services; CI/CD and flavors keep releases quick.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="project">
+  <p class="name">Jomlah Express</p>
+  <p class="meta">Android &amp; iOS | Status: Live on stores</p>
+  <ul>
+    <li>Technologies: Flutter, Dart, Firebase, REST API, Payment Gateway, Google Maps, Provider</li>
+    <li>Description:
+      <ul>
+        <li>Wholesale e-commerce app with catalog browsing, secure checkout, and order tracking on Google Maps.</li>
+        <li>Used Provider and Firebase to keep the cart, product filters, and real-time order updates consistent across screens.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="project">
+  <p class="name">Catwa</p>
+  <p class="meta">Android &amp; iOS | Status: Live on stores</p>
+  <ul>
+    <li>Technologies: Flutter, Dart, Firebase, Google Maps, Provider</li>
+    <li>Description:
+      <ul>
+        <li>Pet food shopping app with a catalog, cart, and delivery scheduling.</li>
+        <li>Provider keeps the cart, sessions, and delivery scheduling consistent through checkout.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<h2>Technical skills</h2>
+<div class="skill"><b>Mobile Development</b><p>Flutter, Dart, Asynchronous Programming (Futures, Streams), Custom Animations, Responsive Design, Method Channels, Native SDK Integration (Kotlin/Swift Plugins), App Size &amp; Build Optimization</p></div>
+<div class="skill"><b>State Management</b><p>BLoC, Cubit, Riverpod, Provider, GetX</p></div>
+<div class="skill"><b>Backend &amp; APIs</b><p>RESTful API Integration (Dio), Real-time Data Streams, WebSocket, WebRTC, Firebase (Authentication, Firestore, Cloud Functions, FCM), Push Notifications, Social Authentication, Deep Links</p></div>
+<div class="skill"><b>Fintech, AI &amp; Maps</b><p>Payment Gateway Integration, Subscriptions &amp; Renewals, Insurance &amp; Claims Flows, AI Chat (Text-to-text, Voice-to-voice, Speech-to-text, Text-to-speech), Google Maps</p></div>
+<div class="skill"><b>Architecture &amp; Patterns</b><p>Clean Architecture, MVVM, MVC, Dependency Injection (get_it), SOLID, OOP, Localization &amp; Internationalization (RTL), Flavors</p></div>
+<div class="skill"><b>Testing &amp; DevOps</b><p>Unit, Bloc, Widget &amp; Integration Testing, CI/CD (GitHub Actions, Fastlane), Git &amp; Version Control, Flutter DevTools (Memory Profiling, Jank Detection, Rebuild Tracking)</p></div>
+<div class="skill"><b>Offline &amp; Local Storage</b><p>Hive, SQLite, Offline-first Architecture, Image Caching, Pagination</p></div>
+<div class="skill"><b>Security</b><p>Certificate Pinning, Secure Storage, Code Obfuscation, Encryption, Authentication &amp; Role-based Access Control</p></div>
+
+<h2>Languages</h2>
+<div class="langs">
+  <div><b>Arabic</b> <span>— Expert</span><p>Native proficiency</p></div>
+  <div><b>English</b> <span>— Proficient</span><p>Advanced proficiency (both written and spoken)</p></div>
+</div>
 
 </body>
 </html>
